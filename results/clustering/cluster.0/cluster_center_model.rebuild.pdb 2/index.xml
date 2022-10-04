@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet  href="job.xsl" type="text/xsl"?><jobState>
+  <program>
+    <head>
+      <name>SABBAC</name>
+      <version>1.3</version>
+      <doc>
+        <title>SABBAC</title>
+        <description>
+          <text lang="en">
+          Structural Alphabet based protein Backbone Builder from Alpha Carbon trace
+        </text>
+        </description>
+        <reference>
+        SABBAC: online Structural Alphabet-based protein BackBone reconstruction from Alpha-Carbon trace. Nucleic Acids Res. 2006 Jul 1;34(Web Server issue):W147-51.
+      </reference>
+        <authors>Maupetit J, Gautier R, Tufféry P.</authors>
+        <doclink>http://bioserv.rpbs.univ-paris-diderot.fr/services/SABBAC</doclink>
+      </doc>
+      <env name="SABBACHOME">/usr/local/SABBAC/1.3</env>
+      <category>Structure:Prediction:3D_structure</category>
+      <category>Structure:Edition</category>
+      <interface type="form" generated="true">
+        <fieldset xmlns="http://www.w3.org/1999/xhtml" class="minimizable" data-paragraphname="InputData">
+          <legend>Input Data</legend>
+          <div>
+            <fieldset class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="Test_3DStructure" data-datatype-superclass="AbstractText" data-biotype="Protein " data-card="" data-formats="PDB " data-parametername="iPDB">
+              <legend>Single model<a href="#idm140370765099632::comment" class="blindLink commentToggle" onclick="if (typeof portal=='undefined'){var target=document.getElementById(this.getAttribute('href').substr(1)); target.style.display=(target.style.display=='none') ? '':'none';}" title="click to expand/collapse contextual help">?</a>
+              </legend>
+              <div id="idm140370765099632::comment" class="commentText" style="display:none" mode="ajaxTarget">
+                <div>
+              Use this input field to rebuilt single chain PDB file
+              (one model). For more information about the format
+              restriction, please read the documentation.
+            </div>
+              </div>
+              <textarea name="iPDB" cols="60" rows="7"> </textarea>
+            </fieldset>
+            <fieldset class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="_3DStructure" data-datatype-superclass="AbstractText" data-biotype="Protein " data-card="" data-formats="PDB " data-parametername="iPDBL">
+              <legend>Multiple models<a href="#idm140370766318320::comment" class="blindLink commentToggle" onclick="if (typeof portal=='undefined'){var target=document.getElementById(this.getAttribute('href').substr(1)); target.style.display=(target.style.display=='none') ? '':'none';}" title="click to expand/collapse contextual help">?</a>
+              </legend>
+              <div id="idm140370766318320::comment" class="commentText" style="display:none" mode="ajaxTarget">
+                <div>
+              Use this input field to rebuilt multiple PDB files (one
+              chain per model), they must be concatenated PDB files
+              (HEADER/END separator) or multiple models PDB file
+              (MODEL/ENDMDL). For more information about the format
+              restriction, please read the documentation.
+            </div>
+              </div>
+              <textarea name="iPDBL" cols="60" rows="7"> </textarea>
+            </fieldset>
+          </div>
+        </fieldset>
+        <fieldset xmlns="http://www.w3.org/1999/xhtml" class="minimizable" data-paragraphname="Options">
+          <legend>Options</legend>
+          <div>
+            <label class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="0" data-datatype="Boolean" data-datatype-superclass="" data-biotype="" data-card="" data-formats="" data-parametername="force">Force CA trace encoding<a href="#idm140370765240448::comment" class="blindLink commentToggle" onclick="if (typeof portal=='undefined'){var target=document.getElementById(this.getAttribute('href').substr(1)); target.style.display=(target.style.display=='none') ? '':'none';}" title="click to expand/collapse contextual help">?</a>
+              <select name="force">
+                <option value="1">Yes</option>
+                <option value="0" selected="selected">No</option>
+              </select>
+              <div id="idm140370765240448::comment" class="commentText" style="display:none" mode="ajaxTarget">
+                <div>
+              Act with care when you check this option. It allows you
+              to force encoding even if CA trace is degenerated
+              (incoherent CAi-CAi+1 distance, missing residues ...).
+            </div>
+              </div>
+            </label>
+          </div>
+        </fieldset>
+      </interface>
+      <interface type="job_input" generated="true">
+        <xhtml:fieldset xmlns:xhtml="http://www.w3.org/1999/xhtml" class="minimizable" data-paragraphname="InputData">
+          <xhtml:legend>Input Data</xhtml:legend>
+          <xhtml:div>
+            <xhtml:div data-parametername="sabbac_cmd" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="String" data-datatype-superclass="" data-biotype="" data-card="" data-formats=""/>
+            <xhtml:div data-parametername="iPDB" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="Test_3DStructure" data-datatype-superclass="AbstractText" data-biotype="Protein " data-card="" data-formats="PDB ">
+              <xhtml:i>
+				(Protein Test_3DStructure)
+			</xhtml:i>
+              <xhtml:a href="#idm140370765099632::comment" class="blindLink commentToggle" onclick="if (typeof portal=='undefined'){var target=document.getElementById(this.getAttribute('href').substr(1)); target.style.display=(target.style.display=='none') ? '':'none';}" title="click to expand/collapse contextual help">?</xhtml:a>
+              <xhtml:div id="idm140370765099632::comment" class="commentText" style="display:none" mode="ajaxTarget">
+                <xhtml:div>
+              Use this input field to rebuilt single chain PDB file
+              (one model). For more information about the format
+              restriction, please read the documentation.
+            </xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+            <xhtml:div data-parametername="iPDBL" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="_3DStructure" data-datatype-superclass="AbstractText" data-biotype="Protein " data-card="" data-formats="PDB ">
+              <xhtml:i>
+				(Protein _3DStructure)
+			</xhtml:i>
+              <xhtml:a href="#idm140370766318320::comment" class="blindLink commentToggle" onclick="if (typeof portal=='undefined'){var target=document.getElementById(this.getAttribute('href').substr(1)); target.style.display=(target.style.display=='none') ? '':'none';}" title="click to expand/collapse contextual help">?</xhtml:a>
+              <xhtml:div id="idm140370766318320::comment" class="commentText" style="display:none" mode="ajaxTarget">
+                <xhtml:div>
+              Use this input field to rebuilt multiple PDB files (one
+              chain per model), they must be concatenated PDB files
+              (HEADER/END separator) or multiple models PDB file
+              (MODEL/ENDMDL). For more information about the format
+              restriction, please read the documentation.
+            </xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </xhtml:fieldset>
+        <xhtml:fieldset xmlns:xhtml="http://www.w3.org/1999/xhtml" class="minimizable" data-paragraphname="Options">
+          <xhtml:legend>Options</xhtml:legend>
+          <xhtml:div>
+            <xhtml:div data-parametername="force" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="0" data-datatype="Boolean" data-datatype-superclass="" data-biotype="" data-card="" data-formats="">
+              <xhtml:a href="#idm140370765240448::comment" class="blindLink commentToggle" onclick="if (typeof portal=='undefined'){var target=document.getElementById(this.getAttribute('href').substr(1)); target.style.display=(target.style.display=='none') ? '':'none';}" title="click to expand/collapse contextual help">?</xhtml:a>
+              <xhtml:div id="idm140370765240448::comment" class="commentText" style="display:none" mode="ajaxTarget">
+                <xhtml:div>
+              Act with care when you check this option. It allows you
+              to force encoding even if CA trace is degenerated
+              (incoherent CAi-CAi+1 distance, missing residues ...).
+            </xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </xhtml:fieldset>
+      </interface>
+      <interface type="job_output" generated="true">
+        <xhtml:fieldset xmlns:xhtml="http://www.w3.org/1999/xhtml" class="minimizable" data-paragraphname="Output">
+          <xhtml:legend>Output</xhtml:legend>
+          <xhtml:div>
+            <xhtml:div data-parametername="oPDB" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="_3DStructure" data-datatype-superclass="AbstractText" data-biotype="Protein " data-card="" data-formats="PDB ">
+              <xhtml:i>
+				(Protein _3DStructure)
+			</xhtml:i>
+            </xhtml:div>
+            <xhtml:div data-parametername="stdout" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="Report" data-datatype-superclass="" data-biotype="" data-card="" data-formats="">
+              <xhtml:i>
+				(Report)
+			</xhtml:i>
+            </xhtml:div>
+          </xhtml:div>
+        </xhtml:fieldset>
+      </interface>
+    </head>
+    <parameters>
+      <paragraph>
+        <name>InputData</name>
+        <prompt>Input Data</prompt>
+        <parameters>
+          <parameter iscommand="1" ishidden="1">
+            <name>sabbac_cmd</name>
+            <prompt>command</prompt>
+            <type>
+              <datatype>
+                <class>String</class>
+              </datatype>
+            </type>
+            <format>
+              <code proglang="python">"drun sabbac SABBAC -s -F -n 1 -w ."</code>
+            </format>
+            <interface generated="true" type="job_input">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="String" data-datatype-superclass="" data-biotype="" data-card="" data-formats="" data-parametername="sabbac_cmd"/>
+            </interface>
+          </parameter>
+          <parameter>
+            <name>iPDB</name>
+            <prompt lang="en">Single model</prompt>
+            <type>
+              <biotype>Protein</biotype>
+              <datatype>
+                <class>Test_3DStructure</class>
+                <superclass>AbstractText</superclass>
+              </datatype>
+              <dataFormat>PDB</dataFormat>
+            </type>
+            <format>
+              <code proglang="python">( "", " -i "+str(value) )[ value is not None ]</code>
+            </format>
+            <argpos>1</argpos>
+            <comment>
+              <text lang="en">
+              Use this input field to rebuilt single chain PDB file
+              (one model). For more information about the format
+              restriction, please read the documentation.
+            </text>
+            </comment>
+            <interface type="form" generated="true">
+              <xhtml:fieldset xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                <xhtml:legend>Single model</xhtml:legend>
+                <xhtml:textarea name="iPDB" cols="60" rows="7"> </xhtml:textarea>
+              </xhtml:fieldset>
+            </interface>
+            <interface generated="true" type="job_input">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="Test_3DStructure" data-datatype-superclass="AbstractText" data-biotype="Protein " data-card="" data-formats="PDB " data-parametername="iPDB">
+                <i>
+				(Protein Test_3DStructure)
+			</i>
+                <a href="#idm140370765099632::comment" class="blindLink commentToggle" onclick="if (typeof portal=='undefined'){var target=document.getElementById(this.getAttribute('href').substr(1)); target.style.display=(target.style.display=='none') ? '':'none';}" title="click to expand/collapse contextual help">?</a>
+                <div id="idm140370765099632::comment" class="commentText" style="display:none" mode="ajaxTarget">
+                  <div>
+              Use this input field to rebuilt single chain PDB file
+              (one model). For more information about the format
+              restriction, please read the documentation.
+            </div>
+                </div>
+              </div>
+            </interface>
+          </parameter>
+          <parameter>
+            <name>iPDBL</name>
+            <prompt lang="en">Multiple models</prompt>
+            <type>
+              <biotype>Protein</biotype>
+              <datatype>
+                <class>_3DStructure</class>
+                <superclass>AbstractText</superclass>
+              </datatype>
+              <dataFormat>PDB</dataFormat>
+            </type>
+            <format>
+              <code proglang="python">( "", " -m "+str(value) )[ value is not None ]</code>
+            </format>
+            <argpos>2</argpos>
+            <comment>
+              <text lang="en">
+              Use this input field to rebuilt multiple PDB files (one
+              chain per model), they must be concatenated PDB files
+              (HEADER/END separator) or multiple models PDB file
+              (MODEL/ENDMDL). For more information about the format
+              restriction, please read the documentation.
+            </text>
+            </comment>
+            <interface type="form" generated="true">
+              <xhtml:fieldset xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                <xhtml:legend>Multiple models</xhtml:legend>
+                <xhtml:textarea name="iPDBL" cols="60" rows="7"> </xhtml:textarea>
+              </xhtml:fieldset>
+            </interface>
+            <interface generated="true" type="job_input">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="_3DStructure" data-datatype-superclass="AbstractText" data-biotype="Protein " data-card="" data-formats="PDB " data-parametername="iPDBL">
+                <i>
+				(Protein _3DStructure)
+			</i>
+                <a href="#idm140370766318320::comment" class="blindLink commentToggle" onclick="if (typeof portal=='undefined'){var target=document.getElementById(this.getAttribute('href').substr(1)); target.style.display=(target.style.display=='none') ? '':'none';}" title="click to expand/collapse contextual help">?</a>
+                <div id="idm140370766318320::comment" class="commentText" style="display:none" mode="ajaxTarget">
+                  <div>
+              Use this input field to rebuilt multiple PDB files (one
+              chain per model), they must be concatenated PDB files
+              (HEADER/END separator) or multiple models PDB file
+              (MODEL/ENDMDL). For more information about the format
+              restriction, please read the documentation.
+            </div>
+                </div>
+              </div>
+            </interface>
+          </parameter>
+        </parameters>
+      </paragraph>
+      <paragraph>
+        <name>Options</name>
+        <prompt>Options</prompt>
+        <parameters>
+          <parameter>
+            <name>force</name>
+            <prompt lang="en">Force CA trace encoding</prompt>
+            <type>
+              <datatype>
+                <class>Boolean</class>
+              </datatype>
+            </type>
+            <vdef>
+              <value>0</value>
+            </vdef>
+            <format>
+              <code proglang="python">( "" , " -f" )[ value ]</code>
+            </format>
+            <comment>
+              <text lang="en">
+              Act with care when you check this option. It allows you
+              to force encoding even if CA trace is degenerated
+              (incoherent CAi-CAi+1 distance, missing residues ...).
+            </text>
+            </comment>
+            <argpos>3</argpos>
+            <interface type="form" generated="true">
+              <label xmlns="http://www.w3.org/1999/xhtml" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="" data-datatype-superclass="" data-biotype="" data-card="" data-formats="">Force CA trace encoding<a href="#idm140370765240448::comment" class="blindLink commentToggle" onclick="if (typeof portal=='undefined'){var target=document.getElementById(this.getAttribute('href').substr(1)); target.style.display=(target.style.display=='none') ? '':'none';}" title="click to expand/collapse contextual help">?</a>
+                <select name="force">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="selected">No</option>
+                </select>
+                <div id="idm140370765240448::comment" class="commentText" style="display:none" mode="ajaxTarget">
+                  <div>
+              Act with care when you check this option. It allows you
+              to force encoding even if CA trace is degenerated
+              (incoherent CAi-CAi+1 distance, missing residues ...).
+            </div>
+                </div>
+              </label>
+            </interface>
+            <interface generated="true" type="job_input">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="0" data-datatype="Boolean" data-datatype-superclass="" data-biotype="" data-card="" data-formats="" data-parametername="force">
+                <a href="#idm140370765240448::comment" class="blindLink commentToggle" onclick="if (typeof portal=='undefined'){var target=document.getElementById(this.getAttribute('href').substr(1)); target.style.display=(target.style.display=='none') ? '':'none';}" title="click to expand/collapse contextual help">?</a>
+                <div id="idm140370765240448::comment" class="commentText" style="display:none" mode="ajaxTarget">
+                  <div>
+              Act with care when you check this option. It allows you
+              to force encoding even if CA trace is degenerated
+              (incoherent CAi-CAi+1 distance, missing residues ...).
+            </div>
+                </div>
+              </div>
+            </interface>
+          </parameter>
+        </parameters>
+      </paragraph>
+      <paragraph>
+        <name>Output</name>
+        <prompt>Output</prompt>
+        <parameters>
+          <parameter isout="1">
+            <name>oPDB</name>
+            <prompt lang="en">SABBAC rebuilt PDB file</prompt>
+            <type>
+              <biotype>Protein</biotype>
+              <datatype>
+                <class>_3DStructure</class>
+                <superclass>AbstractText</superclass>
+              </datatype>
+              <dataFormat>PDB</dataFormat>
+            </type>
+            <filenames>
+              <code proglang="python">"*_sabbac.pdb"</code>
+            </filenames>
+            <interface generated="true" type="job_output">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="_3DStructure" data-datatype-superclass="AbstractText" data-biotype="Protein " data-card="" data-formats="PDB " data-parametername="oPDB">
+                <i>
+				(Protein _3DStructure)
+			</i>
+              </div>
+            </interface>
+          </parameter>
+          <parameter isstdout="true">
+            <name>stdout</name>
+            <prompt>Standard output</prompt>
+            <type>
+              <datatype>
+                <class>Report</class>
+              </datatype>
+            </type>
+            <filenames>
+              <code proglang="perl">"SABBAC.out"</code>
+              <code proglang="python">"SABBAC.out"</code>
+            </filenames>
+            <interface generated="true" type="job_output">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="parameter " title="" data-issimple="false" data-ismultiple="false" data-default-value="" data-datatype="Report" data-datatype-superclass="" data-biotype="" data-card="" data-formats="" data-parametername="stdout">
+                <i>
+				(Report)
+			</i>
+              </div>
+            </interface>
+          </parameter>
+        </parameters>
+      </paragraph>
+    </parameters>
+  </program>
+  <name>https://mobyle.rpbs.univ-paris-diderot.fr/data/services/servers/local/programs/SABBAC.xml</name>
+  <host>https://mobyle.rpbs.univ-paris-diderot.fr</host>
+  <id>https://mobyle.rpbs.univ-paris-diderot.fr/data/jobs/SABBAC/U07295343569994</id>
+  <date>01/25/22  17:12:42</date>
+  <sessionKey>D04919185419083</sessionKey>
+  <data>
+    <input>
+      <parameter>
+        <name>iPDB</name>
+      </parameter>
+      <file>
+        <raw fmt="not detected" size="258397">cluster_center_model.pdb</raw>
+      </file>
+    </input>
+    <output>
+      <parameter>
+        <name>stderr</name>
+      </parameter>
+      <file size="2190">SABBAC.err</file>
+    </output>
+    <output>
+      <parameter>
+        <name>stdout</name>
+      </parameter>
+      <file size="262301">SABBAC.out</file>
+    </output>
+  </data>
+  <commandLine>drun sabbac SABBAC -s -F -n 1 -w . -i cluster_center_model.pdb</commandLine>
+  <status>
+    <value>finished</value>
+    <message/>
+  </status>
+</jobState>

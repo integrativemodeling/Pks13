@@ -1,0 +1,127 @@
+\documentclass[8pt,a4paper]{article} 
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage[margin=0.2in]{geometry}
+\fontfamily{phv}\fontseries{mc}\selectfont
+\begin{document}
+
+\setcounter{table}{8}
+
+\begin{longtable}{ p{.48\textwidth} | p{.48\textwidth} } 
+\caption{Summary of the Pks13 dimer integrative structure modeling}
+  
+  &  \\
+  \textbf{1) Gathering information} & \\
+    \hline
+
+            \textit{Prior models} & 2-fold symmetry derived from cryo-EM structure\\
+                \textit{Physical principles and statistical preferences} & Excluded volume\\
+            & Sequence connectivity \\
+                \textit{Experimental data} & 57 DSS0\\
+            & Atomic structure from cryo-EM map; PDB TBD \\
+          
+    &  \\
+    \normalsize{\textbf{2) Representing the system}} & \\
+    \hline
+    
+            \textit{Atomic (structured) components} & Pks13: 1-76, 89-228, 229-232, 233-529, 588-835, 836-838, 839-1074, 1078-1173, 1238-1356, 1461-1535, 1539-1816, 1-76, 89-228, 229-232, 233-529, 588-835, 836-838, 839-1074, 1078-1173, 1238-1356, 1461-1535, 1539-1816\\
+                \textit{Unstructured components} & Pks13: 77-88, 530-587, 1075-1077, 1174-1237, 1357-1460, 1536-1538, 77-88, 530-587, 1075-1077, 1174-1237, 1357-1460, 1536-1538\\
+                \textit{Resolution of structured components} & 1 [R1] residue per bead\\
+                \textit{Resolution of unstructured components} & 10 [R10] residues per bead\\
+                \textit{Structural coverage} & 86.77 \%\\
+                \textit{Rigid body (RB) definitions} & RB1: Pks13$_{1-76}$\\
+            & RB2: Pks13$_{89-228}$,Pks13$_{229-232}$,Pks13$_{233-529}$,Pks13$_{588-835}$,Pks13$_{836-838}$,Pks13$_{839-1074}$ \\
+            & RB3: Pks13$_{1078-1173}$ \\
+            & RB4: Pks13$_{1238-1356}$ \\
+            & RB5: Pks13$_{1461-1535}$ \\
+            & RB6: Pks13$_{1539-1816}$ \\
+            & RB7: Pks13$_{1-76}$ \\
+            & RB8: Pks13$_{89-228}$,Pks13$_{229-232}$,Pks13$_{233-529}$,Pks13$_{588-835}$,Pks13$_{836-838}$,Pks13$_{839-1074}$ \\
+            & RB9: Pks13$_{1078-1173}$ \\
+            & RB10: Pks13$_{1238-1356}$ \\
+            & RB11: Pks13$_{1461-1535}$ \\
+            & RB12: Pks13$_{1539-1816}$ \\
+                \textit{Resolution of disordered regions} & 10 [R10] residues per bead\\
+                \textit{Composition (number of copies of Pks13)} & 2\\
+                \textit{Spatial restraints encoded into scoring function} & Excluded volume; applied to the R1 representation\\
+            & Sequence connectivity; applied to the R1 representation \\
+            & Cross-link restraints; applied to the R1 representation \\
+        
+
+  &  \\
+    \normalsize{\textbf{3.1) Enumeration of threading of degrees of freedom}} & \\
+    \hline
+      
+   &  \\
+    \normalsize{\textbf{3.2) Structural Sampling}} & \\
+    \hline
+            \textit{Sampling method} & Replica Exchange Gibbs sampling, based on Metropolis Monte Carlo\\
+                \textit{Replica exchange temperature range} & 1.0 - 2.5\\
+                \textit{Number of replicas} & 8\\
+                \textit{Number of runs} & 100\\
+                \textit{Number of structures generated} & 2500000\\
+                \textit{Movers for flexible string of bead} & Random translation up to 4.0 \AA\\
+                \textit{CPU time} & 22 hours on 80 processors\\
+        
+   &  \\
+  
+\normalsize{\textbf{4.1) Validating the threading models}} & \\
+    \hline
+  
+ &  \\
+
+  \normalsize{\textbf{4.2) Validating the Pom152 ring models}} & \\
+    \hline
+   \textbf{Models selected for validation} & \\
+    \hline
+          \textit{Number of models after equilibration} & 2500000\\
+                \textit{Number of models that satisfy the input information} & 229554\\
+                \textit{Number of structures in samples A/B} & 112886/116668\\
+                \textit{p-value of non-parametric Kolmogorov-Smirnov two-sample test} & 0.02 (threshold p-value $>$ 0.05)\\
+                \textit{Kolmogorov-Smirnov two-sample test statistic, D} & 1.0\\
+           \hline
+    
+    \textbf{Thoroughness of the structural sampling} & \\
+    \hline
+          \textit{Sampling precision} & 61.37 \AA \\
+                \textit{Homogeneity of proportions $\chi^2$ test (p-value)/Cramer’s V value} & 0.000/0.067 (thresholds: p-value$>$0.05 OR Cramer's V$<$0.1)\\
+                \textit{Number of clusters} & 3\\
+                \textit{Cluster precisions} & cluster 1 : 55.0 $\%$\\
+            & cluster 2 : 21.7 $\%$ \\
+            & cluster 3 : 19.1 $\%$ \\
+                \textit{Average cross-correlation between localization probability densities of samples A and B} & cluster 1: 0.89\\
+            & cluster 2: 0.72 \\
+            & cluster 3: 0.7 \\
+                \textit{Cluster populations} & cluster 1 : 52.7 $\%$\\
+            & cluster 2 : 21.7 $\%$ \\
+            & cluster 3 : 20.9 $\%$ \\
+           \hline
+  
+  \textbf{Validation by information used for modeling} & \\
+  \hline
+          \textit{Percent of sequence connectivity restraints satisfied per structure} & 99 \%\\
+                \textit{Percent cross-link restraints satisfied by ensemble} & 91 \%\\
+                \textit{Percent of excluded volume restraints satisfied per structure} & 99 \%\\
+          &  \\
+  
+   &  \\
+  \normalsize{\textbf{6) Software and data availability}} & \\
+    \hline
+   \textbf{Software} & \\
+   \hline
+             \textit{Modeling programs} & IMP PMI module, version 2.16.0\\
+             & Integrative Modeling Platform (IMP), version 2.16.0 \\
+                  \textit{Modeling scripts} & https://github.com/integrativemodeling/Pks13\\
+                  \textit{Structure prediction} & AlphaFold2\\
+                  \textit{Visualization and plotting} & UCSF Chimera\\
+             & Matplotlib, version 3.0.3  \\
+          \hline
+
+  \textbf{Data} & \\
+    \hline
+            \textit{PDB-dev accesion code} & TBD\\
+          \hline
+  
+\end{longtable}
+\end{document}
